@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad Educativa Jaime Roldós Aguilera</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #2196f3, #90caf9);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        .boton {
+            background-color: #fff;
+            color: #2196f3;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .boton:hover {
+            background-color: #1976d2;
+            color: #fff;
+        }
+
+        .seccion {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 15px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Unidad Educativa Jaime Roldós Aguilera</h1>
+        <p>Bienvenidos estudiantes y padres de familia</p>
+    </header>
+
+    <nav>
+        <button class="boton" onclick="mostrarSeccion('comunicados')">Comunicados</button>
+        <button class="boton" onclick="mostrarSeccion('galeria')">Galería de Fotos</button>
+        <button class="boton" onclick="mostrarSeccion('contacto')">Contacto</button>
+    </nav>
+
+    <div id="comunicados" class="seccion">
+        <h2>Comunicados</h2>
+        <ul style="text-align: left;">
+            <li><strong>01/07/2025:</strong> Se informa a los padres de familia que el inicio de clases será el 15 de septiembre.</li>
+            <li><strong>15/07/2025:</strong> Reunión general virtual el 20 de julio a las 17h00.</li>
+        </ul>
+    </div>
+
+    <div id="galeria" class="seccion">
+        <h2>Galería de Fotos</h2>
+        <img src="https://via.placeholder.com/600x400.png?text=Foto+del+Evento" alt="Foto Evento">
+        <p>Fotos de nuestras actividades se publicarán aquí.</p>
+    </div>
+
+    <div id="contacto" class="seccion">
+        <h2>Contacto</h2>
+        <p>Correo: <strong>unidadeducativa@ejemplo.com</strong></p>
+        <p>Teléfono: <strong>0999999999</strong></p>
+        <p>Dirección: Av. Principal, Ciudad, País</p>
+    </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            document.getElementById('comunicados').style.display = 'none';
+            document.getElementById('galeria').style.display = 'none';
+            document.getElementById('contacto').style.display = 'none';
+
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
